@@ -3,7 +3,7 @@ import { loadMovies, wireMovieToggle } from './movies.js';
 import { loadTV, wireTvToggle } from './tv.js';
 import { initScrollTopButton } from './scrollTop.js';
 
-const API_KEY = 'cb7c7779c5c4232012594c012cf9a701';
+const API_KEY = [];
 const BASE_URL = 'https://api.themoviedb.org/3/';
 const MAX_TRENDS = 14;
 

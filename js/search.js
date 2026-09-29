@@ -6,10 +6,10 @@ let moviePanelOpen = false;
 const MAX_TRENDS = 6;
 
 // sample api call for a movie search (searching for: ghost in the shell)
-// https://api.themoviedb.org/3/search/movie?api_key=cb7c7779c5c4232012594c012cf9a701&query=ghost in the shell
+// https://api.themoviedb.org/3/search/movie?api_key=[]&query=ghost in the shell
 
 // Code begins:
-const API_KEY = 'cb7c7779c5c4232012594c012cf9a701'
+const API_KEY = [];
 const BASE_URL = 'https://api.themoviedb.org/3/';
 
 async function searchMovies() {
