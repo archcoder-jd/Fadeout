@@ -3,7 +3,6 @@ import { loadMovies, wireMovieToggle } from './movies.js';
 import { loadTV, wireTvToggle } from './tv.js';
 import { initScrollTopButton } from './scrollTop.js';
 
-const API_KEY = [];
 const BASE_URL = '/api/tmdb/';
 const MAX_TRENDS = 14;
 

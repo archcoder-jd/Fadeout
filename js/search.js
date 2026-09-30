@@ -9,8 +9,7 @@ const MAX_TRENDS = 6;
 // https://api.themoviedb.org/3/search/movie?api_key=[]&query=ghost in the shell
 
 // Code begins:
-const API_KEY = [];
-const BASE_URL = ;
+const BASE_URL = '/api/tmdb/';
 
 async function searchMovies() {
   let query = document.querySelector('#txtSearch').value;

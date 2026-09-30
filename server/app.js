@@ -18,7 +18,7 @@ const server = http.createServer(async (req, res) =>{
     return send(400, '{"error":"Not allowed"}');
   }
 
-  url.searchParams.delete("api_key");
+  url.searchParams.delete("api_key"); // ignore any key sent by browser
   const tmdb = new URL(`https://api.themoviedb.org/3${path}`);
 
   try {

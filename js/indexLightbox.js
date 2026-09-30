@@ -1,6 +1,5 @@
 
 // ====== Config ======
-const API_KEY = [];
 const BASE_URL = '/api/tmdb/';
 const DEFAULT_LANGUAGE = 'en-US';
 
