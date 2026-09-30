@@ -758,9 +758,13 @@ p {
 
 .footer-content {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: var(--space-12);
-  margin-bottom: var(--space-16);
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.footer .container {
+  padding-inline: clamp(20px, 4vw, 48px);
 }
 
 .footer-brand {
@@ -795,7 +799,8 @@ p {
 .footer-description {
   color: var(--gray-400);
   line-height: 1.6;
-  margin-bottom: var(--space-6);
+  max-width: 40ch;
+  margin-bottom: 0;
 }
 
 .footer-social-links {
@@ -853,10 +858,15 @@ p {
 
 .footer-bottom-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: var(--space-4) var(--space-6);
   color: var(--gray-400);
-  
+}
+
+.footer-bottom-content p {
+  margin: 0;
 }
 
 .footer-bottom-links {
