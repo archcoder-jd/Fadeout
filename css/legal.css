@@ -1,0 +1,15 @@
+/* Privacy Policy and Terms of Service pages */
+.legal {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 120px 24px 80px;
+  line-height: 1.7;
+}
+.legal h1 { font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1.1; margin: 0 0 8px; }
+.legal .effective { opacity: .7; margin: 0 0 32px; }
+.legal .summary { border-left: 3px solid currentColor; padding: 4px 0 4px 18px; margin: 0 0 40px; opacity: .9; }
+.legal h2 { font-size: 1.35rem; margin: 40px 0 12px; }
+.legal h3 { font-size: 1.05rem; margin: 24px 0 8px; }
+.legal p, .legal li { margin: 0 0 12px; }
+.legal ul { padding-left: 1.3rem; }
+.legal a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }

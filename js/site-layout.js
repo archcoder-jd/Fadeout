@@ -132,9 +132,8 @@ class FadeoutFooter extends HTMLElement {
             <div class="footer-bottom-content">
               <p id="copy">&copy; 2026 Fadeout All rights reserved.</p>
               <div class="footer-bottom-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Cookie Policy</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
               </div>
             </div>
           </div>
