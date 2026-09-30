@@ -115,7 +115,6 @@ async function searchTitles({ page = 1, language = DEFAULT_LANGUAGE } = {}) {
   currentSearchController = new AbortController();
 
   const params = new URLSearchParams({
-    api_key: API_KEY,
     query,
     include_adult: 'false',
     language,
@@ -256,7 +255,6 @@ async function getTitleDetails({ id, type }) {
   if (!id || !type) return;
 
   const params = new URLSearchParams({
-    api_key: API_KEY,
     language: DEFAULT_LANGUAGE,
   });
   const path = type === 'movie' ? `movie/${id}` : `tv/${id}`;

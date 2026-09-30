@@ -18,7 +18,7 @@ export function wireMovieToggle(onChange) {
 // Public API: loadMovies({ apiKey, baseUrl, max })
 export async function loadMovies({ apiKey, baseUrl, max = 20 }) {
   const period = getPeriod() ?? 'day';
-  const url = `${baseUrl}trending/movie/${period}?api_key=${apiKey}`;
+  const url = `${baseUrl}trending/movie/${period}`;
   try {
     const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);

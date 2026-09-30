@@ -270,7 +270,7 @@ function selectTopCredits(credits, type = 'movie') {
 // ====== Details fetchers for Home (Movies/TV) ======
 async function getMovieDetails(id) {
   if (!id) return;
-  const params = new URLSearchParams({ api_key: API_KEY, language: DEFAULT_LANGUAGE });
+  const params = new URLSearchParams({ language: DEFAULT_LANGUAGE });
   const url = `${BASE_URL}movie/${id}?${params.toString()}`;
 
   try {
@@ -313,7 +313,7 @@ async function getMovieDetails(id) {
 }
 async function getTvDetails(id) {
   if (!id) return;
-  const params = new URLSearchParams({ api_key: API_KEY, language: DEFAULT_LANGUAGE });
+  const params = new URLSearchParams({ language: DEFAULT_LANGUAGE });
   const url = `${BASE_URL}tv/${id}?${params.toString()}`;
 
   try {

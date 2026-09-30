@@ -6,14 +6,14 @@ let moviePanelOpen = false;
 const MAX_TRENDS = 6;
 
 // sample api call for a movie search (searching for: ghost in the shell)
-// https://api.themoviedb.org/3/search/movie?api_key=[]&query=ghost in the shell
+// https://api.themoviedb.org/3/search/movie?query=ghost in the shell
 
 // Code begins:
 const BASE_URL = '/api/tmdb/';
 
 async function searchMovies() {
   let query = document.querySelector('#txtSearch').value;
-  const url = `${BASE_URL}search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}`;
+  const url = `${BASE_URL}search/movie?query=${encodeURIComponent(query)}`;
   console.log(url);
   const response = await fetch(url);
 
@@ -122,7 +122,7 @@ function showPoster() {
 
 
 async function getMovieDetails(id) {
-  const url = `${BASE_URL}movie/${id}?api_key=${API_KEY}&language=en-US`;
+  const url = `${BASE_URL}movie/${id}?language=en-US`;
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);

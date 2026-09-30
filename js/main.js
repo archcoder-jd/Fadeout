@@ -9,17 +9,17 @@ const MAX_TRENDS = 14;
 
 window.addEventListener('DOMContentLoaded', () => {
   // Initial loads
-  loadMovies({ apiKey: API_KEY, baseUrl: BASE_URL, max: MAX_TRENDS });
-  loadTV({ apiKey: API_KEY, baseUrl: BASE_URL, max: MAX_TRENDS });
+  loadMovies({ baseUrl: BASE_URL, max: MAX_TRENDS });
+  loadTV({ baseUrl: BASE_URL, max: MAX_TRENDS });
 
   // Re-load movies whenever the toggle changes
   wireMovieToggle(() => {
-    loadMovies({ apiKey: API_KEY, baseUrl: BASE_URL, max: MAX_TRENDS });
+    loadMovies({ baseUrl: BASE_URL, max: MAX_TRENDS });
   });
 
   // Re-load movies whenever the toggle changes
   wireTvToggle(() => {
-    loadTV({ apiKey: API_KEY, baseUrl: BASE_URL, max: MAX_TRENDS });
+    loadTV({ baseUrl: BASE_URL, max: MAX_TRENDS });
   });
 
   initScrollTopButton(); 

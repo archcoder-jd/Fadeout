@@ -18,7 +18,7 @@ export function wireTvToggle(onChange) {
 // Public API: loadShows({ apiKey, baseUrl, max })
 export async function loadTV({ apiKey, baseUrl, max = 20 }) {
   const period = getPeriod() ?? 'day';
-  const url = `${baseUrl}trending/tv/${period}?api_key=${apiKey}`;
+  const url = `${baseUrl}trending/tv/${period}`;
   try {
     const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
