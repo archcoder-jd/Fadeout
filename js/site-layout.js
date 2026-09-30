@@ -16,9 +16,9 @@ class FadeoutHeader extends HTMLElement {
             </div>
             
             <div class="nav-links">
-              <a href="#movies" title="Movies" alt="Trending">Trending</a>
-              <a href="#tv" title="TV Shows" alt="TV Shows">TV Shows</a>
-              <a href="#ftw" title="Free to Watch" alt="Free to Watch">Free to Watch</a>
+              <a href="index.html#movies" title="Movies" alt="Trending">Trending</a>
+              <a href="index.html#tv" title="TV Shows" alt="TV Shows">TV Shows</a>
+              <a href="index.html#ftw" title="Free to Watch" alt="Free to Watch">Free to Watch</a>
               <a href="search.html" title="Search" alt="Search">Search</a>
               <a href="STW.html" title="Safe" alt="Safe">STW</a>
             </div>
@@ -57,15 +57,95 @@ class FadeoutHeader extends HTMLElement {
 
       <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu-content">
-          <a href="#movies" title="Movies" alt="Trending">Trending</a>
-          <a href="#tv" title="TV Shows" alt="TV Shows">TV Shows</a>
-          <a href="#ftw" title="Free to Watch" alt="Free to Watch">Free to Watch</a>
+          <a href="index.html#movies" title="Movies" alt="Trending">Trending</a>
+          <a href="index.html#tv" title="TV Shows" alt="TV Shows">TV Shows</a>
+          <a href="index.html#ftw" title="Free to Watch" alt="Free to Watch">Free to Watch</a>
           <a href="search.html" title="Search" alt="Search">Search</a>
           <a href="STW.html" title="Safe" alt="Safe">STW</a>
         </div>
       </div>
     </header>`;
+
+    // Mobile menu
+    const btn = this.querySelector(".mobile-menu-btn");
+    const menu = this.querySelector("#mobileMenu");
+    if (!btn || !menu) return;
+
+    const openMenu = () => {
+      menu.classList.add("open");
+      btn.classList.add("open");
+      btn.setAttribute("aria-expanded", "true");
+      document.documentElement.style.overflow = "hidden";
+    };
+
+    const closeMenu = () => {
+      menu.classList.remove("open");
+      btn.classList.remove("open");
+      btn.setAttribute("aria-expanded", "false");
+      document.documentElement.style.overflow = "";
+    };
+
+    window.toggleMenu = () => {
+      menu.classList.contains("open") ? closeMenu() : openMenu();
+    };
+
+    menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && menu.classList.contains("open")) closeMenu();
+    });
+
+    const current = location.pathname.split("/").pop() || "index.html";
+    this.querySelectorAll(".nav-links a, .mobile-menu a").forEach((a) => {
+      const url = new URL(a.href);
+      if (!url.hash && url.pathname.split("/").pop() === current) {
+        a.classList.add("active");
+        a.setAttribute("aria-current", "page");
+      }
+    });
   }
 }
 
 customElements.define("fadeout-header", FadeoutHeader);
+
+class FadeoutFooter extends HTMLElement {
+  connectedCallback() {
+    if (this.dataset.ready) return;
+    this.dataset.ready = "true";
+
+    this.innerHTML =
+      `<footer class="footer bg-gray-900" id="footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-section">
+              <div class="footer-brand">
+                <a class="footer-brand-link" href="index.html" rel="noopener">
+                  <img class="brand-logo" src="assets/logoFullCropped.png" alt="Fadeout">
+                  <span class="footer-brand-text"></span>
+                </a>
+              </div>
+              <p class="footer-description">
+                Fadeout aims to be a high quality and a trusted source of entertainment data.
+              </p>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="footer-bottom-content">
+              <p id="copy">&copy; 2026 Fadeout All rights reserved.</p>
+              <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>`;
+
+    const copy = this.querySelector("#copy");
+    if (copy) copy.textContent = `© ${new Date().getFullYear()} Fadeout. All rights reserved.`;
+  }
+}
+
+customElements.define("fadeout-footer", FadeoutFooter);
