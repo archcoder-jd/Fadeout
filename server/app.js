@@ -1,6 +1,6 @@
 const htto = require("http");
 
-const TOKEN = ProcessingInstruction.env.TMDB_TOKEN;
+const TOKEN = process.env.TMDB_TOKEN;
 const ALLOWED = ["/movie", "/search", "/trending", "/genre", "/discovery", "/tv", "/person", "/configuration"];
 
 const server = http.createServer(async (req, res) =>{
