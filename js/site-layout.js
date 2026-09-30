@@ -20,7 +20,6 @@ class FadeoutHeader extends HTMLElement {
               <a href="index.html#tv" title="TV Shows" alt="TV Shows">TV Shows</a>
               <a href="index.html#ftw" title="Free to Watch" alt="Free to Watch">Free to Watch</a>
               <a href="search.html" title="Search" alt="Search">Search</a>
-              <a href="STW.html" title="Safe" alt="Safe">STW</a>
             </div>
             
             <div class="nav-actions">
@@ -61,7 +60,6 @@ class FadeoutHeader extends HTMLElement {
           <a href="index.html#tv" title="TV Shows" alt="TV Shows">TV Shows</a>
           <a href="index.html#ftw" title="Free to Watch" alt="Free to Watch">Free to Watch</a>
           <a href="search.html" title="Search" alt="Search">Search</a>
-          <a href="STW.html" title="Safe" alt="Safe">STW</a>
         </div>
       </div>
     </header>`;
