@@ -1,7 +1,7 @@
 
 // ====== Config ======
 const API_KEY = [];
-const BASE_URL = 'https://api.themoviedb.org/3/';
+const BASE_URL = '/api/tmdb/';
 const DEFAULT_LANGUAGE = 'en-US';
 
 // ====== Helpers (same ones you used on search) ======

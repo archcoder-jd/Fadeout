@@ -10,7 +10,7 @@ const MAX_TRENDS = 6;
 
 // Code begins:
 const API_KEY = [];
-const BASE_URL = 'https://api.themoviedb.org/3/';
+const BASE_URL = ;
 
 async function searchMovies() {
   let query = document.querySelector('#txtSearch').value;

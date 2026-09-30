@@ -1,0 +1,9 @@
+
+deployment:
+  tasks:
+    - export SITEPATH=/home/venture3/fadeout.venture31.com/
+    - export APIPATH=/home/venture3/fadeout-api/
+    - /bin/cp -R index.html search.html tvTrend.html watchlist.html STW.html martin.html css js assets $SITEPATH
+    - /bin/mkdir -p ${APIPATH}tmp
+    - /bin/cp server/app.js server/package.json $APIPATH
+    - /bin/touch ${APIPATH}tmp/restart.txt
