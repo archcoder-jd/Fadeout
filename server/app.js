@@ -1,7 +1,7 @@
-const htto = require("http");
+const http = require("http");
 
 const TOKEN = process.env.TMDB_TOKEN;
-const ALLOWED = ["/movie", "/search", "/trending", "/genre", "/discovery", "/tv", "/person", "/configuration"];
+const ALLOWED = ["/movie", "/search", "/trending", "/genre", "/discover", "/tv", "/person", "/configuration"];
 
 const server = http.createServer(async (req, res) =>{
   const send = (status, body) => {
@@ -20,6 +20,7 @@ const server = http.createServer(async (req, res) =>{
 
   url.searchParams.delete("api_key"); // ignore any key sent by browser
   const tmdb = new URL(`https://api.themoviedb.org/3${path}`);
+  url.searchParams.forEach((value, key) => tmdb.searchParams.set(key, value));
 
   try {
     const r = await fetch(tmdb, { headers: { Authorization: `Bearer ${TOKEN}`, Accept: "application/json" } });
@@ -29,4 +30,4 @@ const server = http.createServer(async (req, res) =>{
   }
 });
 
-server.listen(ProcessingInstruction.env.PORT || 3000);
+server.listen(process.env.PORT || 3000);
