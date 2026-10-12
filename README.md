@@ -111,10 +111,11 @@ Fadeout is deployed with cPanel's Git Version Control. On each deploy, `.cpanel.
 **Troubleshooting:** if `/api` returns a 503, the Node.js app failed to start. The reason is written to `stderr.log` in the app's folder.
 
 ## Status
-![GitHub repo size](https://img.shields.io/github/repo-size/archcoder-jd/archcoder-jd.github.io)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/archcoder-jd/archcoder-jd.github.io)
-![GitHub repo file or directory count](https://img.shields.io/github/directory-file-count/archcoder-jd/archcoder-jd.github.io)
-![GitHub top language](https://img.shields.io/github/languages/top/archcoder-jd/archcoder-jd.github.io)
+![Website](https://img.shields.io/website?url=http%3A//www.fadeout.venture31.com)
+![GitHub repo size](https://img.shields.io/github/repo-size/archcoder-jd/Fadeout)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/archcoder-jd/Fadeout)
+![GitHub repo file or directory count](https://img.shields.io/github/directory-file-count/archcoder-jd/Fadeout)
+![GitHub top language](https://img.shields.io/github/languages/top/archcoder-jd/Fadeout)
 
 ## Credits
 
