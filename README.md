@@ -2,7 +2,7 @@
 
 A movie and TV discovery web app powered by [The Movie Database (TMDB)](https://www.themoviedb.org/). Browse what's trending, search across films and shows, and open detailed title pages with ratings, credits and trailers.
 
-![Website](https://img.shields.io/website?url=http%3A//www.fadeout.venture31.com)/[fadeout.venture31.com](https://fadeout.venture31.com)
+![Website](https://img.shields.io/website?url=http%3A//www.fadeout.venture31.com)<br>[fadeout.venture31.com](https://fadeout.venture31.com)
 
 <!-- Add a screenshot here, e.g. ![Fadeout home page](assets/images/screenshot.png) -->
 
